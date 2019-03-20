@@ -9,11 +9,15 @@ fetch_player_games_stats(player_id, season = "")
 \arguments{
 \item{player_id}{a number or string that represent the id of an nhl player}
 
-\item{season}{a number of string, if you want to specify a specific season}
+\item{season}{a number of string, if you want to specify a specific season , example 20182019}
 }
 \value{
 data.table that contains all stats for the requested player
 }
 \description{
 fetch all games stats for a specific player from the nhl api
+}
+\examples{
+fetch_player_games_stats(8470642)
+fetch_player_games_stats(8470642, 20162017)
 }

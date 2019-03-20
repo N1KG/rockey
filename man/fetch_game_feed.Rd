@@ -15,3 +15,7 @@ data.table that contains all event for the requested game
 \description{
 fetch the game feed for a specific game from the nhl api
 }
+\examples{
+fetch_game_feed(2018020001)
+fetch_game_feed("2018020001")
+}

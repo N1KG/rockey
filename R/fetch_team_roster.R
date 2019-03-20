@@ -10,6 +10,10 @@
 #' @import httr
 #'
 #' @export
+#' @examples
+#' fetch_team_roster(8)
+#' fetch_team_roster("8")
+#'
 fetch_team_roster <- function(team_id) {
   url  <- "https://statsapi.web.nhl.com"
   path <- paste0("api/v1/teams/", team_id, "?expand=team.roster")

@@ -14,8 +14,13 @@ fetch_schedule(start_date = "", end_date = "", team_id = "")
 \item{team_id}{a number or string that represent the id of an nhl team, if not feed return schedule for all teams}
 }
 \value{
-data.table that contains all schedule info for the period between the given date of return the schedule for the current day if no dates are passed as arguments
+data.table that contains all schedule info for the period between the given dates, return the schedule for the current day if no dates are passed as arguments
 }
 \description{
 fetch schedule info between given dates from the nhl api
+}
+\examples{
+fetch_schedule("03/16/2019", "03/18/2019")
+fetch_schedule(team_id = 8)
+fetch_schedule("01/16/2019", "03/18/2019", 8)
 }

@@ -15,3 +15,8 @@ data.table that contains data for an nhl team roster
 \description{
 fetch all team roster data from the nhl api
 }
+\examples{
+fetch_team_roster(8)
+fetch_team_roster("8")
+
+}

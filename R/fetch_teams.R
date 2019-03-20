@@ -8,6 +8,8 @@
 #' @import httr
 #'
 #' @export
+#' @examples
+#' fetch_teams()
 fetch_teams <- function() {
   url  <- "https://statsapi.web.nhl.com"
   path <- "api/v1/teams"

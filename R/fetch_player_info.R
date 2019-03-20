@@ -10,6 +10,9 @@
 #' @import httr
 #'
 #' @export
+#' @examples
+#' fetch_player_info(8470642)
+#' fetch_player_info("8470642")
 fetch_player_info <- function(player_id) {
   url  <- "https://statsapi.web.nhl.com"
   path <- paste0("api/v1/people/", player_id)
@@ -25,9 +28,9 @@ fetch_player_info <- function(player_id) {
                           player_weight = player$weight, player_active = player$active, player_alternateCaptain = player$alternateCaptain, player_captain = player$captain,
                           player_rookie = player$rookie, player_shootsCatches = player$shootsCatches, player_rosterStatus = player$rosterStatus)
     currentTeam_dt <- as.data.table(player$currentTeam)
-    names(currentTeam_dt) <- paste0("currentTeam_", currentTeam_dt)
+    names(currentTeam_dt) <- paste0("currentTeam_", names(currentTeam_dt))
     primaryPosition_dt <- as.data.table(player$primaryPosition)
-    names(primaryPosition_dt) <- paste0("primaryPosition_", primaryPosition_dt)
+    names(primaryPosition_dt) <- paste0("primaryPosition_", names(primaryPosition_dt))
     do.call(cbind, list(misc_dt, currentTeam_dt, primaryPosition_dt))
   }), fill = T)
 

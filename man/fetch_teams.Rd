@@ -12,3 +12,6 @@ data.table that contains data for all nhl teams
 \description{
 fetch all teams data from the nhl api
 }
+\examples{
+fetch_teams()
+}

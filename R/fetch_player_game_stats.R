@@ -3,7 +3,7 @@
 #' fetch all games stats for a specific player from the nhl api
 #'
 #' @param player_id a number or string that represent the id of an nhl player
-#' @param season a number of string, if you want to specify a specific season
+#' @param season a number of string, if you want to specify a specific season , example 20182019
 #'
 #' @return data.table that contains all stats for the requested player
 #'
@@ -11,6 +11,9 @@
 #' @import httr
 #'
 #' @export
+#' @examples
+#' fetch_player_games_stats(8470642)
+#' fetch_player_games_stats(8470642, 20162017)
 fetch_player_games_stats <- function(player_id, season = "") {
   url  <- "https://statsapi.web.nhl.com"
   path <- paste0("api/v1/people/", player_id, "/stats?stats=gameLog&season=", season)

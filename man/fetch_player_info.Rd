@@ -15,3 +15,7 @@ data.table that contains all info for the requested player
 \description{
 fetch miscellaneous info about specific player from the nhl api
 }
+\examples{
+fetch_player_info(8470642)
+fetch_player_info("8470642")
+}

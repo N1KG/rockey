@@ -10,6 +10,9 @@
 #' @import httr
 #'
 #' @export
+#' @examples
+#' fetch_game_feed(2018020001)
+#' fetch_game_feed("2018020001")
 fetch_game_feed <- function(game_id) {
   url  <- "https://statsapi.web.nhl.com"
   path <- paste0("/api/v1/game/", game_id, "/feed/live")
